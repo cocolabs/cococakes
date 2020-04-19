@@ -20,7 +20,7 @@ public class RegistryHandler {
 	@SubscribeEvent
 	public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 
-		CocoCakes.LOGGER.info("Registering mod Blocks...");
+		CCLogger.info("Registering mod Blocks...");
 		event.getRegistry().registerAll(ModBlocks.getAll());
 	}
 
@@ -29,10 +29,10 @@ public class RegistryHandler {
 
 		final IForgeRegistry<Item> registry = event.getRegistry();
 
-		CocoCakes.LOGGER.info("Registering mod Items...");
+		CCLogger.info("Registering mod Items...");
 		registry.registerAll(ModItems.getAll());
 
-		CocoCakes.LOGGER.info("Registering mod BlockItems...");
+		CCLogger.info("Registering mod BlockItems...");
 		for (Block block : ModBlocks.getAll()) {
 
 			final Item.Properties properties = new Item.Properties().group(ModItemGroup.MAIN);
