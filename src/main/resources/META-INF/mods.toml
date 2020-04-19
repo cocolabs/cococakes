@@ -21,4 +21,4 @@ credits="Thanks for this example mod goes to Java"
 # A text field displayed in the mod UI
 authors="yooksi"
 # The description text for the mod (multi line!)
-description='''Template mod project for Forge 1.15.2'''
+description='''Minecraft mod that adds chocolate cakes. '''
