@@ -2,5 +2,6 @@
   "itemGroup.cococakes": "CocoCakes",
   "item.cococakes.cocoa_powder": "Cocoa Powder",
   "item.cococakes.choco_milk_bucket": "Chocolate Milk Bucket",
-  "block.cococakes.choco_cake": "Chocolate Cake"
+  "block.cococakes.choco_cake": "Chocolate Cake",
+  "block.cococakes.golden_cake": "Golden Cake"
 }
