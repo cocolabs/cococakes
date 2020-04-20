@@ -15,6 +15,11 @@ import net.minecraft.world.World;
 
 public class GoldenCake extends ModCake {
 
+	// TODO: Perhaps move these values to mod config
+
+	private final int FOOD_VALUE = 4;
+	private final float FOOD_SATURATION = 0.2f;
+
 	protected GoldenCake(float hardness, SoundType sound) {
 		super(hardness, sound, MaterialColor.GOLD);
 	}
@@ -41,7 +46,7 @@ public class GoldenCake extends ModCake {
 		}
 		else {
 			player.addStat(Stats.EAT_CAKE_SLICE);
-			player.getFoodStats().addStats(2, 0.1F);
+			player.getFoodStats().addStats(FOOD_VALUE, FOOD_SATURATION);
 			int i = state.get(BITES);
 			if (i < 6) {
 				world.setBlockState(blockPos, state.with(BITES, i + 1), 3);
