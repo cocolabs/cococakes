@@ -30,7 +30,7 @@ public class EventHandler {
 		}
 		ItemStack stack = block.getPickBlock(state, null, world, pos, player);
 		java.lang.reflect.Method addItemParticles = ReflectionUtil.setMethodAccessible(
-				LivingEntity.class, "addItemParticles", ItemStack.class, Integer.TYPE);
+				LivingEntity.class, "func_195062_a", ItemStack.class, Integer.TYPE);
 		try {
 			addItemParticles.invoke(player, stack, 2);
 		}
