@@ -32,7 +32,7 @@ public class EventHandler {
 		java.lang.reflect.Method addItemParticles = ReflectionUtil.setMethodAccessible(
 				LivingEntity.class, "addItemParticles", ItemStack.class, Integer.TYPE);
 		try {
-			addItemParticles.invoke(player, stack, 5);
+			addItemParticles.invoke(player, stack, 2);
 		}
 		catch (IllegalAccessException | java.lang.reflect.InvocationTargetException e) {
 			throw new IllegalStateException(e);
