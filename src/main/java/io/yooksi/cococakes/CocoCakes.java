@@ -10,14 +10,16 @@ import org.apache.logging.log4j.LogManager;
 public class CocoCakes
 {
 	public static final String MODID = "cococakes";
+	private static final EventHandler EVENTS = new EventHandler();
 
 	public CocoCakes() {
 		// Register the setup method for modloading
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
-		// Register ourselves for server and other game events we are interested in
-		MinecraftForge.EVENT_BUS.register(this);
+		// Register events we're interested in
+		MinecraftForge.EVENT_BUS.addListener(EVENTS::onBlockRightClick);
 
+		// Initialize mod logger
 		CCLogger.init(LogManager.getLogger());
 	}
 
