@@ -38,7 +38,7 @@ public class EventHandler {
 			throw new IllegalStateException(e);
 		}
 		net.minecraft.util.SoundEvent eatSound = player.getEatSound(stack);
-		player.playSound(eatSound, 0.5F + 0.5F * (float)RNG.nextInt(2),
-				(RNG.nextFloat() - RNG.nextFloat()) * 0.2F + 1.0F);
+		player.playSound(eatSound, 0.15F + 0.05F * (float)RNG.nextInt(2),
+				(RNG.nextFloat() - RNG.nextFloat()) * 0.04F + 0.25F);
 	}
 }
