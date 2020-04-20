@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "cococakes:cocoa_powder"
+    }
+  ],
+  "result": {
+    "item": "cococakes:choco_milk_bucket"
+  }
+}

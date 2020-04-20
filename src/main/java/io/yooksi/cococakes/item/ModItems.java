@@ -6,6 +6,9 @@ import net.minecraft.util.ResourceLocation;
 
 public enum ModItems {
 
+	COCOA_POWDER(new ModItem(), "cocoa_powder"),
+	CHOCOLATE_MILK(new ChocoMilkBucket(), "choco_milk_bucket");
+
 	private final Item item;
 
 	ModItems(Item item, String name) {
