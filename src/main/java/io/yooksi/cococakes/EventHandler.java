@@ -1,7 +1,9 @@
 package io.yooksi.cococakes;
 
+import io.yooksi.cococakes.util.ReflectionUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -27,6 +29,15 @@ public class EventHandler {
 			return;
 		}
 		ItemStack stack = block.getPickBlock(state, null, world, pos, player);
+		java.lang.reflect.Method addItemParticles = ReflectionUtil.setMethodAccessible(
+				LivingEntity.class, "addItemParticles", ItemStack.class, Integer.TYPE);
+		try {
+			addItemParticles.invoke(player, stack, 5);
+		}
+		catch (IllegalAccessException | java.lang.reflect.InvocationTargetException e) {
+			throw new IllegalStateException(e);
+		}
+		net.minecraft.util.SoundEvent eatSound = player.getEatSound(stack);
 		player.playSound(eatSound, 0.5F + 0.5F * (float)RNG.nextInt(2),
 				(RNG.nextFloat() - RNG.nextFloat()) * 0.2F + 1.0F);
 	}
