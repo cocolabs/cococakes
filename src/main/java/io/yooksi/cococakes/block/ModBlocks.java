@@ -8,7 +8,8 @@ import net.minecraft.util.ResourceLocation;
 
 public enum ModBlocks {
 
-	CHOCOLATE_CAKE(new ModCake(0.5f, SoundType.CLOTH), "choco_cake"),
+	CHOCOLATE_CAKE(new ModCake(0.5f, SoundType.CLOTH), "choco_cake");
+	
 	private final Block block;
 
 	ModBlocks(Block block, String name) {
