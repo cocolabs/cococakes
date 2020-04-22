@@ -20,13 +20,10 @@ public class CocoCakesConfig {
 		CLIENT = specPair.getLeft();
 	}
 
-	// Declare bake config values here
-	// These can be made private and replaced with getters
-	//public static boolean aBoolean;
+	private static boolean canHarvestCakes;
 
 	public static void bakeConfig() {
-		// Bake config values here
-		//aBoolean = CLIENT.aBoolean.get();
+		canHarvestCakes = CLIENT.canHarvestCakes.get();
 	}
 
 	@SubscribeEvent
@@ -35,5 +32,9 @@ public class CocoCakesConfig {
 		if (configEvent.getConfig().getSpec() == CocoCakesConfig.CLIENT_SPEC) {
 			bakeConfig();
 		}
+	}
+
+	public static boolean canRecollectCakes() {
+		return canHarvestCakes;
 	}
 }
