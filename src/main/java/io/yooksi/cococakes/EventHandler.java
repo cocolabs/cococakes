@@ -16,11 +16,11 @@ public class EventHandler {
 
 	public void onBlockRightClick(PlayerInteractEvent.RightClickBlock event) {
 
-		World world = event.getWorld();
-		BlockPos pos = event.getPos();
-		PlayerEntity player = event.getPlayer();
-		BlockState state = world.getBlockState(pos);
-		Block block = state.getBlock();
+		final World world = event.getWorld();
+		final BlockPos pos = event.getPos();
+		final PlayerEntity player = event.getPlayer();
+		final BlockState state = world.getBlockState(pos);
+		final Block block = state.getBlock();
 
 		boolean isBlockCake = block instanceof net.minecraft.block.CakeBlock;
 		if (!isBlockCake || !player.canEat(false)) {
