@@ -14,7 +14,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 import java.util.Objects;
 
 @SuppressWarnings("unused")
-@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD, modid="cococakes")
+@Mod.EventBusSubscriber(modid = CocoCakes.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryHandler {
 
 	@SubscribeEvent

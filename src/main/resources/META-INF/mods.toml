@@ -13,14 +13,14 @@ modId="cococakes"
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="${version}"
  # A display name for the mod
-displayName="Chocolate Cakes"
+displayName="Coco Cakes"
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://github.com/yooksi/cococakes"
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png"
 # A text field displayed in the mod UI
-credits="Thanks to EthernalOne(spGilbert) for commissioning this mod"
+credits="Thanks to EthernalOne(spGilbert) for commissioning the mod and crispytwig for creating textures"
 # A text field displayed in the mod UI
 authors="yooksi"
 # The description text for the mod (multi line!)
-description='''Minecraft mod that adds chocolate cakes. '''
+description='''Minecraft mod that adds new cakes.'''
