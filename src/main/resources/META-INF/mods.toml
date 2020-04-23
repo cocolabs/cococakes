@@ -19,7 +19,7 @@ displayURL="https://github.com/yooksi/cococakes"
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png"
 # A text field displayed in the mod UI
-credits="Thanks to EthernalOne(spGilbert) for commissioning this mod"
+credits="Thanks to EthernalOne(spGilbert) for commissioning the mod and crispytwig for creating textures"
 # A text field displayed in the mod UI
 authors="yooksi"
 # The description text for the mod (multi line!)
