@@ -12,7 +12,7 @@ public enum ModItems {
 	private final Item item;
 
 	ModItems(Item item, String name) {
-		this.item = item.setRegistryName(new ResourceLocation(CocoCakes.MODID, name));
+		this.item = item.setRegistryName(CocoCakes.location(name));
 	}
 
 	public static Item[] getAll() {
