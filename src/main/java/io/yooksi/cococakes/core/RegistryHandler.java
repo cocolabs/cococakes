@@ -1,5 +1,7 @@
-package io.yooksi.cococakes;
+package io.yooksi.cococakes.core;
 
+import io.yooksi.cococakes.CCLogger;
+import io.yooksi.cococakes.CocoCakes;
 import io.yooksi.cococakes.block.ModBlocks;
 import io.yooksi.cococakes.item.ModItemGroup;
 import io.yooksi.cococakes.item.ModItems;
