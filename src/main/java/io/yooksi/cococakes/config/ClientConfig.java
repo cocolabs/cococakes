@@ -7,6 +7,7 @@ public class ClientConfig {
 
 	// Declare config values here
 	public final ForgeConfigSpec.BooleanValue canHarvestCakes;
+	public final ForgeConfigSpec.IntValue cakeMaxStackSize;
 
 	public ClientConfig(ForgeConfigSpec.Builder builder) {
 		// Use builder to define configs
@@ -14,8 +15,13 @@ public class ClientConfig {
 				.comment("Can cake blocks be harvested when broken?")
 				.translation(CocoCakes.MODID + ".config." + "canRecollectCakes")
 				.define("canHarvestCakes", true);
+		
+		cakeMaxStackSize = builder
+				.comment("Maximum size of cake item stack")
+				.translation(CocoCakes.MODID + ".config." + "cakeMaxStackSize")
+				.defineInRange("cakeMaxStackSize", 1, 0, 64);
 
-		builder.push("category").pop();
+		builder.build();
 	}
 }
 

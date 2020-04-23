@@ -1,6 +1,7 @@
 package io.yooksi.cococakes.config;
 
 import io.yooksi.cococakes.CocoCakes;
+import io.yooksi.cococakes.item.ModItem;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,9 +22,11 @@ public class CocoCakesConfig {
 	}
 
 	private static boolean canHarvestCakes;
+	private static int cakeMaxStackSize;
 
 	public static void bakeConfig() {
 		canHarvestCakes = CLIENT.canHarvestCakes.get();
+		cakeMaxStackSize = CLIENT.cakeMaxStackSize.get();
 	}
 
 	@SubscribeEvent
@@ -31,10 +34,15 @@ public class CocoCakesConfig {
 
 		if (configEvent.getConfig().getSpec() == CocoCakesConfig.CLIENT_SPEC) {
 			bakeConfig();
+			ModItem.onUpdateModConfig();
 		}
 	}
 
 	public static boolean canRecollectCakes() {
 		return canHarvestCakes;
+	}
+
+	public static int getCakeMaxStackSize() {
+		return cakeMaxStackSize;
 	}
 }
