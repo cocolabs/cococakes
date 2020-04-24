@@ -1,6 +1,7 @@
 package io.yooksi.cococakes.core;
 
 import com.google.gson.JsonObject;
+import io.yooksi.cococakes.CocoCakes;
 import io.yooksi.cococakes.config.CocoCakesConfig;
 import io.yooksi.cococakes.lang.ModGenericException;
 import net.minecraft.block.BlockState;
@@ -25,7 +26,7 @@ import java.util.List;
  * @see <a href="https://git.io/JfIA8">Forge Docs: Global Loot Modifiers</a>
  */
 @SuppressWarnings("unused")
-class SilkTouchCakeModifier extends LootModifier {
+public class SilkTouchCakeModifier extends LootModifier {
 
 	public SilkTouchCakeModifier(ILootCondition[] conditionsIn) {
 		super(conditionsIn);
@@ -72,6 +73,14 @@ class SilkTouchCakeModifier extends LootModifier {
 				return itemStack;
 		}
 		return ItemStack.EMPTY;
+	}
+
+	/**
+	 * Prepare a new {@code Serializer} instance ready to be registered with Forge.
+	 * @return new {@code Serializer} instance with set registry name
+	 */
+	public static GlobalLootModifierSerializer<SilkTouchCakeModifier> getNewSerializer() {
+		return new Serializer().setRegistryName(CocoCakes.location("silk_touch_cake"));
 	}
 
 	static class Serializer extends GlobalLootModifierSerializer<SilkTouchCakeModifier> {
