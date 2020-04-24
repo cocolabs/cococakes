@@ -14,9 +14,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.Objects;
-
-@SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = CocoCakes.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryHandler {
 
@@ -40,7 +37,7 @@ public class RegistryHandler {
 
 			final Item.Properties properties = new Item.Properties().group(ModItemGroup.MAIN);
 			final BlockItem blockItem = new BlockItem(block, properties);
-			blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
+			blockItem.setRegistryName(java.util.Objects.requireNonNull(block.getRegistryName()));
 			registry.register(blockItem);
 		}
 	}

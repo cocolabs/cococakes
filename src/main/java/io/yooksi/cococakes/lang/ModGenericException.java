@@ -8,6 +8,7 @@ public class ModGenericException extends Exception {
 		super(formatMessage(message));
 	}
 
+	@SuppressWarnings("unused")
 	public ModGenericException(String message, Throwable cause) {
 		super(formatMessage(message), cause);
 	}
