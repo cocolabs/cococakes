@@ -5,6 +5,7 @@ import io.yooksi.cococakes.CocoCakes;
 import io.yooksi.cococakes.config.CocoCakesConfig;
 import io.yooksi.cococakes.lang.ModGenericException;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.CakeBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -47,9 +48,14 @@ public class SilkTouchCakeModifier extends LootModifier {
 			Item selfDrop = state.getBlock().asItem();
 			ItemStack cakeLoot = getItemFromLoot(generatedLoot, selfDrop);
 
-			if (CocoCakesConfig.canRecollectCakes()) {
-				if (cakeLoot.isEmpty())
+			// Do not drop cakes that have been partially eaten
+			if (state.get(CakeBlock.BITES) > 0) {
+				generatedLoot.remove(cakeLoot);
+			}
+			else if (CocoCakesConfig.canRecollectCakes()) {
+				if (cakeLoot.isEmpty()) {
 					generatedLoot.add(new ItemStack(selfDrop));
+				}
 			}
 			else if (!cakeLoot.isEmpty()) {
 				generatedLoot.remove(cakeLoot);
