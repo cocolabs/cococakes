@@ -25,21 +25,15 @@
 /**/gradle.xml
 /**/libraries
 
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
-
 # Configurations
 /**/runConfigurations/
 
 # Grep
-GrepConsole.xml
+/**/GrepConsole.xml
 
 # Discord
-discord.xml
+/**/discord.xml
 
 # Other
-compiler.xml
-jarRepositories.xml
+/**/compiler.xml
+/**/jarRepositories.xml
