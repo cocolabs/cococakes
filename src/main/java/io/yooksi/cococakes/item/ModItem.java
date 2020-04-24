@@ -12,6 +12,9 @@ import java.util.Map;
 
 public class ModItem extends Item {
 
+	public static final Item.Properties FILLED_BUCKET = new Item.Properties()
+		.containerItem(net.minecraft.item.Items.BUCKET).maxStackSize(1);
+
 	public ModItem() {
 		super(new Item.Properties().group(ModItemGroup.MAIN));
 	}
