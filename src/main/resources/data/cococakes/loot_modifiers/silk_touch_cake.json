@@ -1,0 +1,8 @@
+{
+  "conditions": [
+    {
+      "condition": "cococakes:block_tag",
+      "tag": "cococakes:cakes"
+    }
+  ]
+}

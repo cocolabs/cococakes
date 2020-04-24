@@ -1,6 +1,7 @@
 package io.yooksi.cococakes;
 
 import io.yooksi.cococakes.config.CocoCakesConfig;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -31,5 +32,12 @@ public class CocoCakes
 
 	private void setup(final FMLCommonSetupEvent event) {
 		CCLogger.info("Pre-initialization phase");
+	}
+
+	/**
+	 * @return {@code ResourceLocation} pointing to provided path with {@link #MODID} as namespace
+	 */
+	public static ResourceLocation location(String path) {
+		return new ResourceLocation(MODID, path);
 	}
 }

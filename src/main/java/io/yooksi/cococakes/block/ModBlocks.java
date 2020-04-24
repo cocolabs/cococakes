@@ -13,7 +13,7 @@ public enum ModBlocks {
 	private final Block block;
 
 	ModBlocks(Block block, String name) {
-		this.block = block.setRegistryName(new ResourceLocation(CocoCakes.MODID, name));
+		this.block = block.setRegistryName(CocoCakes.location(name));
 	}
 
 	public static Block[] getAll() {
