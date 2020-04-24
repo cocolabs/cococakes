@@ -2,13 +2,12 @@ package io.yooksi.cococakes.block;
 
 import io.yooksi.cococakes.CocoCakes;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.util.ResourceLocation;
 
 public enum ModBlocks {
 
-	CHOCOLATE_CAKE(new ModCake(0.5f, SoundType.CLOTH), "choco_cake"),
-	GOLDEN_CAKE(new GoldenCake(0.5f, SoundType.CLOTH), "golden_cake");
+	CHOCOLATE_CAKE(new ModCakeBlock(), "choco_cake"),
+	GOLDEN_CAKE(new ModCakeBlock(ModCakeBlock.GOLDEN_CAKE_PROPERTIES,
+			4, 0.2f), "golden_cake");
 
 	private final Block block;
 
