@@ -8,6 +8,7 @@ import io.yooksi.cococakes.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.world.storage.loot.conditions.LootConditionManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -42,5 +43,13 @@ public class RegistryHandler {
 			blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
 			registry.register(blockItem);
 		}
+	}
+
+	@SubscribeEvent
+	public static void registerModifierSerializers(RegistryEvent.Register
+			<net.minecraftforge.common.loot.GlobalLootModifierSerializer<?>> event) {
+
+		LootConditionManager.registerCondition(new BlockTagCondition.Serializer());
+		event.getRegistry().register(SilkTouchCakeModifier.getNewSerializer());
 	}
 }
