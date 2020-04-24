@@ -34,7 +34,6 @@ import net.minecraft.world.storage.loot.conditions.ILootCondition;
  * @author gigaherz
  * @see <a href="https://git.io/JfIAR">Survivalist - BlockTagCondition on Github</a>
  */
-@SuppressWarnings("unused")
 public class BlockTagCondition implements ILootCondition {
 
 	private final Tag<Block> blockTag;

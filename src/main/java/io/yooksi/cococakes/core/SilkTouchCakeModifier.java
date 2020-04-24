@@ -26,7 +26,6 @@ import java.util.List;
  *
  * @see <a href="https://git.io/JfIA8">Forge Docs: Global Loot Modifiers</a>
  */
-@SuppressWarnings("unused")
 public class SilkTouchCakeModifier extends LootModifier {
 
 	public SilkTouchCakeModifier(ILootCondition[] conditionsIn) {

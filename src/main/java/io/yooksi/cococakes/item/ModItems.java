@@ -2,7 +2,6 @@ package io.yooksi.cococakes.item;
 
 import io.yooksi.cococakes.CocoCakes;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 
 public enum ModItems {
 
